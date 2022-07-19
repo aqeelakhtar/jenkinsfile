@@ -36,8 +36,7 @@ pipeline
     stage("continuousdelivery")
     {
          steps
-         {
-           input message: 'need approval frpm scrum master', submitter: 'aqeelar'   
+         {  
            sh 'scp /var/lib/jenkins/workspace/declarativepipeline/webapp/target/webapp.war ubuntu@172.31.7.82:/var/lib/tomcat9/webapps/proapp.war'
          }
     }
